@@ -33,6 +33,8 @@ class SentimentResource:
         """Handles API requests"""
         try:
             text = req.params['text']
+            if type(text) == list:
+                text = ','.join(text)
         except KeyError:
             raise falcon.HTTPBadRequest(
                 'Missing thing',
