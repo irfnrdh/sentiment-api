@@ -14,7 +14,6 @@ config["exclamation"] = True
 config["punctuation"] = True
 senti = sentistrength(config)
 
-
 def max_body(limit):
     def hook(req, resp, resource, params):
         length = req.content_length
@@ -41,6 +40,18 @@ class SentimentResource:
                 'A thing must be submitted in the request body.')
         data = senti.main(text)
         resp.media = data
+
+    def on_get(self, req, resp):
+        """Handles GET requests"""
+        resp.status = falcon.HTTP_200
+        resp.content_type = 'text/html'
+        tutorial = (
+            "Lakukan POST dengan parameter <b>text</b>"
+            "&nbsp;ke route <b>/</b> untuk mendapatkan hasil analisis"
+        )
+
+        resp.body = tutorial
+
 
 api = falcon.API()
 api.req_options.auto_parse_form_urlencoded = True

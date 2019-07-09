@@ -1719,7 +1719,6 @@ wah:4
 wajar:3
 wakil:3
 waktunya:1
-waria:-4
 waspada:4
 waspadalah:3
 wow:4
