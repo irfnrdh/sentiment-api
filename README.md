@@ -26,7 +26,7 @@ Contoh Response :
 ```
 {
     "classified_text": "halo apa kabar, aku senang [4] bertemu dengan kamu",
-    "tweet_text": " halo apa kabar, aku senang bertemu dengan kamu",
+    "original_text": " halo apa kabar, aku senang bertemu dengan kamu",
     "sentence_score": [
         "halo apa kabar, aku senang [4] bertemu dengan kamu"
     ],

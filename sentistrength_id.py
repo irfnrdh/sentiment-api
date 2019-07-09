@@ -225,4 +225,4 @@ class sentistrength:
             # print self.sentences_max_pos, self.sentences_max_neg
         sentence_result = self.classify()
         # print self.sentences_text
-        return {"classified_text":". ".join(self.sentences_score),"tweet_text":". ".join(self.sentences_text),"sentence_score":self.sentences_score,"max_positive":self.sentences_max_pos,"max_negative":self.sentences_max_neg,"kelas":sentence_result}
+        return {"classified_text":". ".join(self.sentences_score),"original_text":". ".join(self.sentences_text),"sentence_score":self.sentences_score,"max_positive":self.sentences_max_pos,"max_negative":self.sentences_max_neg,"kelas":sentence_result}
